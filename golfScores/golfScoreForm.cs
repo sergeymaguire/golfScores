@@ -21,5 +21,10 @@ namespace golfScores
         {
             this.Close();
         }
+
+        private void btnDetermineWinner_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(txtNameGolferOne.Text);
+        }
     }
 }
