@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace golfScores
 {
-    public partial class Form1 : Form
+    public partial class GolfScoresForm : Form
     {
-        public Form1()
+        public GolfScoresForm()
         {
             InitializeComponent();
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
