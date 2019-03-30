@@ -36,7 +36,7 @@
             this.btnNextPlayerOne = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lblPlayerOneScore = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotalScorePlayerOne = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblHoleNumberPlayerTwo = new System.Windows.Forms.Label();
             this.lstScoresPlayerTwo = new System.Windows.Forms.ListBox();
@@ -67,7 +67,7 @@
             this.groupBox1.Controls.Add(this.btnNextPlayerOne);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lblPlayerOneScore);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblTotalScorePlayerOne);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -117,6 +117,7 @@
             this.btnNextPlayerOne.TabIndex = 26;
             this.btnNextPlayerOne.Text = "next";
             this.btnNextPlayerOne.UseVisualStyleBackColor = true;
+            this.btnNextPlayerOne.Click += new System.EventHandler(this.btnNextPlayerOne_Click);
             // 
             // label3
             // 
@@ -136,14 +137,14 @@
             this.lblPlayerOneScore.Size = new System.Drawing.Size(0, 13);
             this.lblPlayerOneScore.TabIndex = 23;
             // 
-            // label1
+            // lblTotalScorePlayerOne
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 298);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Total Score:";
+            this.lblTotalScorePlayerOne.AutoSize = true;
+            this.lblTotalScorePlayerOne.Location = new System.Drawing.Point(49, 298);
+            this.lblTotalScorePlayerOne.Name = "lblTotalScorePlayerOne";
+            this.lblTotalScorePlayerOne.Size = new System.Drawing.Size(65, 13);
+            this.lblTotalScorePlayerOne.TabIndex = 22;
+            this.lblTotalScorePlayerOne.Text = "Total Score:";
             // 
             // groupBox2
             // 
@@ -287,6 +288,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "GolfScoresForm";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.GolfScoresForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -306,7 +308,7 @@
         private System.Windows.Forms.Button btnNextPlayerOne;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblPlayerOneScore;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotalScorePlayerOne;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox lstScoresPlayerTwo;
         private System.Windows.Forms.TextBox txtNameGolferTwo;
