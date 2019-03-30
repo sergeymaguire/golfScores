@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numGolferOneHole = new System.Windows.Forms.NumericUpDown();
             this.lblHoleNumberPlayerOne = new System.Windows.Forms.Label();
             this.lstScoresPlayerOne = new System.Windows.Forms.ListBox();
             this.txtNameGolferOne = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnNextPlayerOne = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblPlayerOneHole = new System.Windows.Forms.Label();
             this.lblPlayerOneScore = new System.Windows.Forms.Label();
             this.lblTotalScorePlayerOne = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.numGolferTwoHole = new System.Windows.Forms.NumericUpDown();
             this.lblHoleNumberPlayerTwo = new System.Windows.Forms.Label();
             this.lstScoresPlayerTwo = new System.Windows.Forms.ListBox();
             this.txtNameGolferTwo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnNextPlayerTwo = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblPlayerTwoHole = new System.Windows.Forms.Label();
             this.lblPlayerTwoScore = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTotalScorePlayerTwo = new System.Windows.Forms.Label();
             this.btnDetermineWinner = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.lblWinnerResults = new System.Windows.Forms.Label();
-            this.numGolferOneHole = new System.Windows.Forms.NumericUpDown();
-            this.numGolferTwoHole = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numGolferOneHole)).BeginInit();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numGolferTwoHole)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             this.groupBox1.Controls.Add(this.txtNameGolferOne);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnNextPlayerOne);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblPlayerOneHole);
             this.groupBox1.Controls.Add(this.lblPlayerOneScore);
             this.groupBox1.Controls.Add(this.lblTotalScorePlayerOne);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
@@ -75,6 +75,13 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Golfer #1";
+            // 
+            // numGolferOneHole
+            // 
+            this.numGolferOneHole.Location = new System.Drawing.Point(115, 83);
+            this.numGolferOneHole.Name = "numGolferOneHole";
+            this.numGolferOneHole.Size = new System.Drawing.Size(45, 20);
+            this.numGolferOneHole.TabIndex = 33;
             // 
             // lblHoleNumberPlayerOne
             // 
@@ -119,15 +126,15 @@
             this.btnNextPlayerOne.UseVisualStyleBackColor = true;
             this.btnNextPlayerOne.Click += new System.EventHandler(this.btnNextPlayerOne_Click);
             // 
-            // label3
+            // lblPlayerOneHole
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label3.Location = new System.Drawing.Point(49, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Hole #1";
+            this.lblPlayerOneHole.AutoSize = true;
+            this.lblPlayerOneHole.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblPlayerOneHole.Location = new System.Drawing.Point(49, 83);
+            this.lblPlayerOneHole.Name = "lblPlayerOneHole";
+            this.lblPlayerOneHole.Size = new System.Drawing.Size(45, 13);
+            this.lblPlayerOneHole.TabIndex = 24;
+            this.lblPlayerOneHole.Text = "Hole #1";
             // 
             // lblPlayerOneScore
             // 
@@ -154,15 +161,22 @@
             this.groupBox2.Controls.Add(this.txtNameGolferTwo);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.btnNextPlayerTwo);
-            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.lblPlayerTwoHole);
             this.groupBox2.Controls.Add(this.lblPlayerTwoScore);
-            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.lblTotalScorePlayerTwo);
             this.groupBox2.Location = new System.Drawing.Point(352, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(220, 354);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Golfer #2";
+            // 
+            // numGolferTwoHole
+            // 
+            this.numGolferTwoHole.Location = new System.Drawing.Point(118, 66);
+            this.numGolferTwoHole.Name = "numGolferTwoHole";
+            this.numGolferTwoHole.Size = new System.Drawing.Size(45, 20);
+            this.numGolferTwoHole.TabIndex = 33;
             // 
             // lblHoleNumberPlayerTwo
             // 
@@ -205,16 +219,17 @@
             this.btnNextPlayerTwo.TabIndex = 27;
             this.btnNextPlayerTwo.Text = "next";
             this.btnNextPlayerTwo.UseVisualStyleBackColor = true;
+            this.btnNextPlayerTwo.Click += new System.EventHandler(this.btnNextPlayerTwo_Click);
             // 
-            // label4
+            // lblPlayerTwoHole
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label4.Location = new System.Drawing.Point(50, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Hole #2";
+            this.lblPlayerTwoHole.AutoSize = true;
+            this.lblPlayerTwoHole.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblPlayerTwoHole.Location = new System.Drawing.Point(50, 66);
+            this.lblPlayerTwoHole.Name = "lblPlayerTwoHole";
+            this.lblPlayerTwoHole.Size = new System.Drawing.Size(45, 13);
+            this.lblPlayerTwoHole.TabIndex = 25;
+            this.lblPlayerTwoHole.Text = "Hole #1";
             // 
             // lblPlayerTwoScore
             // 
@@ -224,14 +239,14 @@
             this.lblPlayerTwoScore.Size = new System.Drawing.Size(0, 13);
             this.lblPlayerTwoScore.TabIndex = 24;
             // 
-            // label2
+            // lblTotalScorePlayerTwo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 280);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Total Score:";
+            this.lblTotalScorePlayerTwo.AutoSize = true;
+            this.lblTotalScorePlayerTwo.Location = new System.Drawing.Point(47, 280);
+            this.lblTotalScorePlayerTwo.Name = "lblTotalScorePlayerTwo";
+            this.lblTotalScorePlayerTwo.Size = new System.Drawing.Size(65, 13);
+            this.lblTotalScorePlayerTwo.TabIndex = 23;
+            this.lblTotalScorePlayerTwo.Text = "Total Score:";
             // 
             // btnDetermineWinner
             // 
@@ -261,20 +276,6 @@
             this.lblWinnerResults.Size = new System.Drawing.Size(0, 13);
             this.lblWinnerResults.TabIndex = 26;
             // 
-            // numGolferOneHole
-            // 
-            this.numGolferOneHole.Location = new System.Drawing.Point(115, 83);
-            this.numGolferOneHole.Name = "numGolferOneHole";
-            this.numGolferOneHole.Size = new System.Drawing.Size(45, 20);
-            this.numGolferOneHole.TabIndex = 33;
-            // 
-            // numGolferTwoHole
-            // 
-            this.numGolferTwoHole.Location = new System.Drawing.Point(118, 66);
-            this.numGolferTwoHole.Name = "numGolferTwoHole";
-            this.numGolferTwoHole.Size = new System.Drawing.Size(45, 20);
-            this.numGolferTwoHole.TabIndex = 33;
-            // 
             // GolfScoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,9 +292,9 @@
             this.Load += new System.EventHandler(this.GolfScoresForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numGolferOneHole)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numGolferOneHole)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGolferTwoHole)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -306,7 +307,7 @@
         private System.Windows.Forms.TextBox txtNameGolferOne;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnNextPlayerOne;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPlayerOneHole;
         private System.Windows.Forms.Label lblPlayerOneScore;
         private System.Windows.Forms.Label lblTotalScorePlayerOne;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -314,9 +315,9 @@
         private System.Windows.Forms.TextBox txtNameGolferTwo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnNextPlayerTwo;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPlayerTwoHole;
         private System.Windows.Forms.Label lblPlayerTwoScore;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTotalScorePlayerTwo;
         private System.Windows.Forms.Button btnDetermineWinner;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Label lblWinnerResults;

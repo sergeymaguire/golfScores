@@ -12,8 +12,10 @@ namespace golfScores
 {
     public partial class GolfScoresForm : Form
     {
-        int[] scores = new int[9];//array for scores
+        int[] scores1 = new int[9];//array for scores
+        int[] scores2 = new int[9];//array for scores
         int playerOneHole = 0;
+        int playerTwoHole = 0;
 
         public GolfScoresForm()
         {
@@ -27,16 +29,19 @@ namespace golfScores
 
         private void btnDetermineWinner_Click(object sender, EventArgs e)
         {
-            int total = loadScoresIntoListBox();
-            lblTotalScorePlayerOne.Text =  "Total Score: " + total.ToString();
+            int total1 = loadPlayerOneScores();
+            int total2 = loadPlayerTwoScores();
+            lblTotalScorePlayerOne.Text =  "Total Score: " + total1.ToString();
+            lblTotalScorePlayerTwo.Text = "Total Score: " + total2.ToString();
         }
 
         private void GolfScoresForm_Load(object sender, EventArgs e)
         {
-            initializeScores();
+            initializeScores(scores1);
+            initializeScores(scores2);
         }
 
-        private void initializeScores()
+        private void initializeScores(int[] scores)
         {
             for (int i = 0; i < scores.Length; i++)//setting scores to zero
             {
@@ -44,15 +49,29 @@ namespace golfScores
             }
         }
 
-        private int loadScoresIntoListBox()
+        private int loadPlayerOneScores()
         {
             int total = 0;
             lstScoresPlayerOne.Items.Clear();
-            for (int i = 0; i < scores.Length; i++)//setting scores to zero
+            for (int i = 0; i < scores1.Length; i++)//setting scores to zero
             {
-                lstScoresPlayerOne.Items.Add("Hole #" + (i + 1).ToString() +  " Score: " + scores[i].ToString());//adding scores to listbox
-                total = total + scores[i]; //accumulating total
+                lstScoresPlayerOne.Items.Add("Hole #" + (i + 1).ToString() +  " Score: " + scores1[i].ToString());//adding scores to listbox
+                total = total + scores1[i]; //accumulating total for player one
             }
+           
+            return total;
+        }
+
+        private int loadPlayerTwoScores()
+        {
+            int total = 0;
+            lstScoresPlayerTwo.Items.Clear();
+            for (int i = 0; i < scores2.Length; i++)//setting scores to zero
+            {
+                lstScoresPlayerTwo.Items.Add("Hole #" + (i + 1).ToString() + " Score: " + scores2[i].ToString());//adding scores to listbox
+                total = total + scores2[i]; //accumulating total for player one
+            }
+
             return total;
         }
 
@@ -60,10 +79,20 @@ namespace golfScores
         {
             if (playerOneHole < 9)// if within nine holes add to score
             {
-                scores[playerOneHole++] = (int)numGolferOneHole.Value;
+                scores1[playerOneHole++] = (int)numGolferOneHole.Value;
+                lblPlayerOneHole.Text = "Hole #" + playerOneHole.ToString();
             }
+
+
         }
 
-       
+        private void btnNextPlayerTwo_Click(object sender, EventArgs e)
+        {
+            if (playerTwoHole < 9)// if within nine holes add to score
+            {
+                scores2[playerTwoHole++] = (int)numGolferTwoHole.Value;
+                lblPlayerTwoHole.Text = "Hole #" + playerTwoHole.ToString();
+            }
+        }
     }
 }
