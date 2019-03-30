@@ -19,7 +19,7 @@ namespace golfScores
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();// allows user to quit the game
         }
 
         private void btnDetermineWinner_Click(object sender, EventArgs e)

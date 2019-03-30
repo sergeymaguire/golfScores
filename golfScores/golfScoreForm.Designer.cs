@@ -30,7 +30,7 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblHoleNumberPlayerOne = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstScoresPlayerOne = new System.Windows.Forms.ListBox();
             this.txtNameGolferOne = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnNextPlayerOne = new System.Windows.Forms.Button();
@@ -39,7 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblHoleNumberPlayerTwo = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lstScoresPlayerTwo = new System.Windows.Forms.ListBox();
             this.txtNameGolferTwo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnNextPlayerTwo = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@
             // 
             this.groupBox1.Controls.Add(this.numGolferOneHole);
             this.groupBox1.Controls.Add(this.lblHoleNumberPlayerOne);
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.lstScoresPlayerOne);
             this.groupBox1.Controls.Add(this.txtNameGolferOne);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnNextPlayerOne);
@@ -84,13 +84,13 @@
             this.lblHoleNumberPlayerOne.Size = new System.Drawing.Size(0, 13);
             this.lblHoleNumberPlayerOne.TabIndex = 32;
             // 
-            // listBox1
+            // lstScoresPlayerOne
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(55, 117);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 160);
-            this.listBox1.TabIndex = 30;
+            this.lstScoresPlayerOne.FormattingEnabled = true;
+            this.lstScoresPlayerOne.Location = new System.Drawing.Point(55, 117);
+            this.lstScoresPlayerOne.Name = "lstScoresPlayerOne";
+            this.lstScoresPlayerOne.Size = new System.Drawing.Size(120, 160);
+            this.lstScoresPlayerOne.TabIndex = 30;
             // 
             // txtNameGolferOne
             // 
@@ -149,7 +149,7 @@
             // 
             this.groupBox2.Controls.Add(this.numGolferTwoHole);
             this.groupBox2.Controls.Add(this.lblHoleNumberPlayerTwo);
-            this.groupBox2.Controls.Add(this.listBox2);
+            this.groupBox2.Controls.Add(this.lstScoresPlayerTwo);
             this.groupBox2.Controls.Add(this.txtNameGolferTwo);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.btnNextPlayerTwo);
@@ -171,13 +171,13 @@
             this.lblHoleNumberPlayerTwo.Size = new System.Drawing.Size(0, 13);
             this.lblHoleNumberPlayerTwo.TabIndex = 32;
             // 
-            // listBox2
+            // lstScoresPlayerTwo
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(62, 116);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 160);
-            this.listBox2.TabIndex = 30;
+            this.lstScoresPlayerTwo.FormattingEnabled = true;
+            this.lstScoresPlayerTwo.Location = new System.Drawing.Point(62, 116);
+            this.lstScoresPlayerTwo.Name = "lstScoresPlayerTwo";
+            this.lstScoresPlayerTwo.Size = new System.Drawing.Size(120, 160);
+            this.lstScoresPlayerTwo.TabIndex = 30;
             // 
             // txtNameGolferTwo
             // 
@@ -300,7 +300,7 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstScoresPlayerOne;
         private System.Windows.Forms.TextBox txtNameGolferOne;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnNextPlayerOne;
@@ -308,7 +308,7 @@
         private System.Windows.Forms.Label lblPlayerOneScore;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox lstScoresPlayerTwo;
         private System.Windows.Forms.TextBox txtNameGolferTwo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnNextPlayerTwo;
