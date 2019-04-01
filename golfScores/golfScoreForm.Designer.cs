@@ -273,8 +273,9 @@
             this.lblWinnerResults.AutoSize = true;
             this.lblWinnerResults.Location = new System.Drawing.Point(281, 372);
             this.lblWinnerResults.Name = "lblWinnerResults";
-            this.lblWinnerResults.Size = new System.Drawing.Size(0, 13);
+            this.lblWinnerResults.Size = new System.Drawing.Size(63, 13);
             this.lblWinnerResults.TabIndex = 26;
+            this.lblWinnerResults.Text = "winner label";
             // 
             // GolfScoresForm
             // 

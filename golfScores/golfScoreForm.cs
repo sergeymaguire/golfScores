@@ -8,6 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Golf scores
+
+//A virtual golf game
+
+//sergey maguire 
+
+//Professor Ronald 
+
+//4/1/19
+
+//C# programming project three
 namespace golfScores
 {
     public partial class GolfScoresForm : Form
@@ -31,14 +42,27 @@ namespace golfScores
         {
             int total1 = loadPlayerOneScores();
             int total2 = loadPlayerTwoScores();
-            lblTotalScorePlayerOne.Text =  "Total Score: " + total1.ToString();
+            lblTotalScorePlayerOne.Text = "Total Score: " + total1.ToString();
             lblTotalScorePlayerTwo.Text = "Total Score: " + total2.ToString();
+            if (total1 < total2)
+            {
+                lblWinnerResults.Text = txtNameGolferOne.Text + " Wins";
+            }
+            else if (total1 > total2)
+            {
+                lblWinnerResults.Text = txtNameGolferTwo.Text + " Wins";
+            }
+            else
+            {
+                lblWinnerResults.Text = "Tied!";
+            }
         }
 
         private void GolfScoresForm_Load(object sender, EventArgs e)
         {
             initializeScores(scores1);
             initializeScores(scores2);
+            lblWinnerResults.Text = "";
         }
 
         private void initializeScores(int[] scores)
@@ -55,10 +79,10 @@ namespace golfScores
             lstScoresPlayerOne.Items.Clear();
             for (int i = 0; i < scores1.Length; i++)//setting scores to zero
             {
-                lstScoresPlayerOne.Items.Add("Hole #" + (i + 1).ToString() +  " Score: " + scores1[i].ToString());//adding scores to listbox
+                lstScoresPlayerOne.Items.Add("Hole #" + (i + 1).ToString() + " Score: " + scores1[i].ToString());//adding scores to listbox
                 total = total + scores1[i]; //accumulating total for player one
             }
-           
+
             return total;
         }
 
