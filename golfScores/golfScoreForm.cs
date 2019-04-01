@@ -105,6 +105,7 @@ namespace golfScores
             {
                 scores1[playerOneHole++] = (int)numGolferOneHole.Value;
                 lblPlayerOneHole.Text = "Hole #" + playerOneHole.ToString();
+                numGolferOneHole.Value = 0;
             }
 
 
@@ -116,6 +117,7 @@ namespace golfScores
             {
                 scores2[playerTwoHole++] = (int)numGolferTwoHole.Value;
                 lblPlayerTwoHole.Text = "Hole #" + playerTwoHole.ToString();
+                numGolferTwoHole.Value = 0;
             }
         }
     }
